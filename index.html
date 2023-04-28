@@ -63,7 +63,7 @@
                   <!-- Validacción Nombre, 50 caracteres, solo letras -->
                   <div class="form-outline form-white mb-4">
                     <label class="form-label" for="">Nombre*</label>
-                    <input name="L_Nombre" minlength="3" maxlength="50" type="text" class="form-control form-control-lg" required pattern="[a-zA-Z]+" placeholder="Nombre Completo"/> 
+                    <input name="L_Nombre" minlength="3" maxlength="50" type="text" class="form-control form-control-lg" required pattern="[a-zA-Z ]+" placeholder="Nombre Completo"/> 
                   </div>
 
                   <!-- Validacción Correo, 50 caracteres -->
@@ -75,13 +75,13 @@
                   <!-- Validacción Dirección de Residencia, 50 caracteres -->
                   <div class="form-outline form-white mb-4">
                     <label class="form-label" for="">Dirección de Correo*</label>
-                    <input name="L_Direccion" minlength="3" maxlength="30" type="text" class="form-control form-control-lg" requiredc placeholder="Calle 00 # 00-00, Barrio Nombre, Ciudad"/> 
+                    <input name="L_Direccion" minlength="3" maxlength="30" type="text" class="form-control form-control-lg" requiredc placeholder="Calle 00 # 00-00"/> 
                   </div>
 
                   <!-- Validacción Estrato, 2 caracteres -->
                   <div class="form-outline form-white mb-4">
                     <label class="form-label" for="">Estrato*</label>
-                    <input name="L_Estrato" min="1" max="6" value="1" type="number" class="form-control form-control-lg"/> 
+                    <input name="L_Estrato" min="1" max="6" value="1" type="number" class="form-control form-control-lg" required/> 
                   </div>
 
                   <!--Validacción Contraseña, minimo 8 maximo 15 caracteres, obligatorio-->
@@ -96,11 +96,11 @@
 
                 </form>
                 
-                <form action="#">
+                <!-- <form action="#">
                   <div class="text-center mt-4">
                     <input class="btn btn-outline-light btn-lg px-5" type="submit" value="Login">
                   </div>
-                </form>
+                </form> -->
                 
 
               </div>
@@ -111,5 +111,22 @@
       </div>
     </div>
   </section>  
+
+  <script>
+    // Obtener los parámetros de la URL (mensaje y tipo)
+    const urlParams = new URLSearchParams(window.location.search);
+    const mensaje = urlParams.get('mensaje');
+    const tipo = urlParams.get('tipo');
+
+    // Mostrar la alerta correspondiente
+    if (mensaje && tipo) {
+        if (tipo === 'success') {
+            alert(mensaje);
+        } else if (tipo === 'error') {
+            alert(mensaje);
+        }
+    }
+  </script>
+
 </body>
 </html>
