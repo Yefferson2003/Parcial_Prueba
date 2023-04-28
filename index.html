@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Vista Formulario</title>
+  
+
+  <script  src="./JS/script.JS"></script>
+
+  <!-- Latest compiled and minified CSS --> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<style>
+  .gradient-custom {
+    /* fallback for old browsers */
+    background: #6a11cb;
+
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+  }
+</style>
+
+<body>
+  <!--Formulario-->
+  <section class="vh-100 gradient-custom">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-10">
+          <div class="card bg-dark text-white" style="border-radius: 1rem;">
+            <div class="card-body p-5 ">
+  
+              <div class="mb-md-5 mt-md-4 pb-5">
+                
+                <div class="text-center">
+                  <h2 class="fw-bold mb-2 text-uppercase">¡Bienvenido!</h2>
+                  <h3 class="fw-bold mb-2">Registrar Nuevo Usuario</h3>
+                  <p class="text-white-50 mb-5">Porfavor ingrese los datos correctamente!</p>
+                </div>
+                
+                
+                <form method="post" action="">
+                  
+                  <!-- Validacción Número de Documento, 10 caracteres, solo números -->
+                  <div class="form-outline form-white mb-4">
+                    <label class="form-label" for="">Número De Documento*</label>
+                    <input name="L_ID" minlength="10" maxlength="10" type="text" class="form-control form-control-lg" required pattern="[0-9]+" placeholder="Documento de Identidad"/> 
+                  </div>
+                
+                  <!-- Validacción Nombre, 50 caracteres, solo letras -->
+                  <div class="form-outline form-white mb-4">
+                    <label class="form-label" for="">Nombre*</label>
+                    <input name="L_Nombre" minlength="3" maxlength="50" type="text" class="form-control form-control-lg" required pattern="[a-zA-Z]+" placeholder="Nombre Completo"/> 
+                  </div>
+
+                  <!-- Validacción Correo, 50 caracteres -->
+                  <div class="form-outline form-white mb-4">
+                    <label class="form-label" for="">Dirección de Correo*</label>
+                    <input name="L_Correo" minlength="3" maxlength="50" type="email" class="form-control form-control-lg" requiredc placeholder="Example@dominio.com"/> 
+                  </div>
+
+                  <!-- Validacción Dirección de Residencia, 50 caracteres -->
+                  <div class="form-outline form-white mb-4">
+                    <label class="form-label" for="">Dirección de Correo*</label>
+                    <input name="L_Direccion" minlength="3" maxlength="30" type="text" class="form-control form-control-lg" requiredc placeholder="Calle 00 # 00-00, Barrio Nombre, Ciudad"/> 
+                  </div>
+
+                  <!-- Validacción Estrato, 2 caracteres -->
+                  <div class="form-outline form-white mb-4">
+                    <label class="form-label" for="">Estrato*</label>
+                    <input name="L_Estrato" min="1" max="6" value="1" type="number" class="form-control form-control-lg"/> 
+                  </div>
+
+                  <!--Validacción Contraseña, minimo 8 maximo 15 caracteres, obligatorio-->
+                  <div class="form-outline form-white mb-4">
+                    <label class="form-label" for="typePasswordX">Contraseña*</label>
+                    <input name="L_Contraseña" id="Contraseña" minlength="8" maxlength="15" type="text" class="form-control form-control-lg" required placeholder="Clave"/>              
+                  </div>
+                
+                  <div class="text-center">
+                    <input class="btn btn-outline-light btn-lg px-5" type="submit" value="Registrar">
+                  </div>
+
+                </form>
+                
+                <form action="#">
+                  <div class="text-center mt-4">
+                    <input class="btn btn-outline-light btn-lg px-5" type="submit" value="Login">
+                  </div>
+                </form>
+                
+
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>  
+</body>
+</html>
